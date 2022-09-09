@@ -1,6 +1,8 @@
 {
   "name": "pokedex",
   "version": "0.0.1",
+  "build": "1",
+  "relaseDate": "09/09/22",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

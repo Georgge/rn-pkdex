@@ -26,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import config from './package.json';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -88,9 +89,7 @@ const App = () => {
           <Section title="Debug">
             <DebugInstructions />
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
+          <Section title="Learn More">Build : {config.build}</Section>
           <LearnMoreLinks />
         </View>
       </ScrollView>
