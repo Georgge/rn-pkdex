@@ -3,13 +3,6 @@ format_version: '11'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: react-native
 workflows:
-  checkNode:
-    description: |
-      Checking node version
-    steps:
-    - nodeversion@0:
-      title: 'Node Version'
-      - command: node --version
   deploy:
     description: |
       Tests, builds and deploys the app using *Deploy to bitrise.io* Step.
@@ -52,6 +45,9 @@ workflows:
       Next steps:
       - Check out [Getting started with React Native apps](https://devcenter.bitrise.io/en/getting-started/getting-started-with-react-native-apps.html).
     steps:
+    - nodeversion@0:
+      title: 'Node Version'
+      - command: node --version
     - activate-ssh-key@4: {}
     - git-clone@6: {}
     - yarn@0:
