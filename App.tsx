@@ -80,17 +80,10 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            <Text>Build: {config.build + '\n'}</Text>
+            <Text>Version: {config.version + '\n'}</Text>
+            <Text>RelaseDate: {config.releaseDate + '\n'}</Text>
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">Build : {config.build}</Section>
-          <LearnMoreLinks />
         </View>
       </ScrollView>
     </SafeAreaView>
